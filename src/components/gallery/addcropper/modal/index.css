@@ -13,7 +13,6 @@
 
  .croppermodal .position-center {
     position: fixed;
-    /* background-color: #fff; */ 
     width: 175px; 
     top: 50%;
     left: 50%;
@@ -23,3 +22,16 @@
 .croppermodal .position-center i {
     font-size: 150px;
 }
+.croppermodal .box{
+    display: inline-block;
+    padding: 10px;
+    box-sizing: border-box;
+
+
+  }
+  .croppermodal .img-preview{
+    overflow: hidden;
+    border-radius: 50%;
+
+  }
+  

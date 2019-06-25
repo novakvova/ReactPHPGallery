@@ -14,7 +14,7 @@ class CropperWidgetContainer extends Component {
         return ( 
             <div className={classnames('croppermodal', { 'open': loading })}>
                 <div className="container">
-                    <div className="row" style={{ margin: '100px' }}>
+                    <div className="row" style={{ marginTop: '100px' }}>
                         <div className="col-md-8">
                             <Cropper
                                 style={{ height: 400, width: '100%' }}
@@ -22,14 +22,26 @@ class CropperWidgetContainer extends Component {
                                 guides={false}
                                 viewMode={1}
                                 dragMode="move"
+                                preview=".img-preview"
                                 src={src}   
                                 // ref={cropper => { this.cropper = cropper; }}
                             />
                         </div>
                         <div className="col-md-4">
-                            <button className="btn btn-success">Обрізати фото</button>
-                            <button className="btn btn-danger" onClick={(e)=> onClose(e) }>Закрити</button>
+                            
+                            <div>
+                                <div className="box" style={{ width: '100%' }}>
+                                    <button className="btn btn-success">Обрізати фото</button>
+                                    <button className="btn btn-danger" onClick={(e) => onClose(e)}>Закрити</button>
+                                    <br />
+                                    <div  style={{ marginTop: 20 }}>
+                                        <div className="img-preview" style={{ height: 300 }} />
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>
